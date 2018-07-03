@@ -1,0 +1,15 @@
+public String mixString(String a, String b) {
+  int minLength = (a.length() < b.length()) ? a.length() : b.length();
+  String result = "";
+  for (int i = 0; i < minLength; i++) {
+    result += (String.valueOf(a.charAt(i)) + String.valueOf(b.charAt(i)));
+  }
+  if (a.length() > minLength) {
+    result += a.substring(minLength);
+  }
+  if (b.length() > minLength) {
+    result += b.substring(minLength);
+  }
+  return result;
+}
+
